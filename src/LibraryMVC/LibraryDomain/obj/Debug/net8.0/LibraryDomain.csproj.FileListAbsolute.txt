@@ -1,0 +1,11 @@
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\bin\Debug\net8.0\LibraryDomain.deps.json
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\bin\Debug\net8.0\LibraryDomain.dll
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\bin\Debug\net8.0\LibraryDomain.pdb
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\LibraryDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\LibraryDomain.AssemblyInfoInputs.cache
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\LibraryDomain.AssemblyInfo.cs
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\LibraryDomain.csproj.CoreCompileInputs.cache
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\LibraryDomain.dll
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\refint\LibraryDomain.dll
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\LibraryDomain.pdb
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\ref\LibraryDomain.dll

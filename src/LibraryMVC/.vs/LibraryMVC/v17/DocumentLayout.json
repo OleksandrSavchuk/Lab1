@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\Lab1\\src\\LibraryMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|c:\\projects\\lab1\\src\\librarymvc\\librarydomain\\model\\authorbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|solutionrelative:librarydomain\\model\\authorbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthorBook.cs",
+              "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\AuthorBook.cs",
+              "RelativeDocumentMoniker": "LibraryDomain\\Model\\AuthorBook.cs",
+              "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\AuthorBook.cs",
+              "RelativeToolTip": "LibraryDomain\\Model\\AuthorBook.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T12:32:32.03Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
