@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using LibraryDomain.Model;
 using Microsoft.EntityFrameworkCore;
+using LibraryDomain.Model;
 
 namespace LibraryInfrastructure;
 
@@ -18,13 +18,9 @@ public partial class DblibraryContext : DbContext
 
     public virtual DbSet<Author> Authors { get; set; }
 
-    public virtual DbSet<AuthorBook> AuthorBooks { get; set; }
-
     public virtual DbSet<Book> Books { get; set; }
 
     public virtual DbSet<Genre> Genres { get; set; }
-
-    public virtual DbSet<GenreBook> GenreBooks { get; set; }
 
     public virtual DbSet<Reader> Readers { get; set; }
 
@@ -44,24 +40,45 @@ public partial class DblibraryContext : DbContext
             entity.Property(e => e.LastName).HasMaxLength(50);
         });
 
-        modelBuilder.Entity<AuthorBook>(entity =>
-        {
-            entity.HasKey(e => e.AuthorBookId).HasName("PK__AuthorBo__B68972CEE0B493F4");
-
-            entity.HasOne(d => d.Author).WithMany(p => p.AuthorBooks)
-                .HasForeignKey(d => d.AuthorId)
-                .HasConstraintName("FK__AuthorBoo__Autho__5CD6CB2B");
-
-            entity.HasOne(d => d.Book).WithMany(p => p.AuthorBooks)
-                .HasForeignKey(d => d.BookId)
-                .HasConstraintName("FK__AuthorBoo__BookI__5DCAEF64");
-        });
-
         modelBuilder.Entity<Book>(entity =>
         {
             entity.HasKey(e => e.BookId).HasName("PK__Books__3DE0C207BCF2F99E");
 
             entity.Property(e => e.Title).HasMaxLength(50);
+
+            entity.HasMany(d => d.Authors).WithMany(p => p.Books)
+                .UsingEntity<Dictionary<string, object>>(
+                    "AuthorBook",
+                    r => r.HasOne<Author>().WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__AuthorBoo__Autho__6D0D32F4"),
+                    l => l.HasOne<Book>().WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__AuthorBoo__BookI__6C190EBB"),
+                    j =>
+                    {
+                        j.HasKey("BookId", "AuthorId").HasName("PK__AuthorBo__6AED6DC4C7ADBB47");
+                        j.ToTable("AuthorBooks");
+                    });
+
+            entity.HasMany(d => d.Genres).WithMany(p => p.Books)
+                .UsingEntity<Dictionary<string, object>>(
+                    "GenreBook",
+                    r => r.HasOne<Genre>().WithMany()
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__GenreBook__Genre__693CA210"),
+                    l => l.HasOne<Book>().WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__GenreBook__BookI__68487DD7"),
+                    j =>
+                    {
+                        j.HasKey("BookId", "GenreId").HasName("PK__GenreBoo__CDD89250DA500ECE");
+                        j.ToTable("GenreBooks");
+                    });
         });
 
         modelBuilder.Entity<Genre>(entity =>
@@ -69,19 +86,6 @@ public partial class DblibraryContext : DbContext
             entity.HasKey(e => e.GenreId).HasName("PK__Genres__0385057EE7A450B1");
 
             entity.Property(e => e.GenreName).HasMaxLength(50);
-        });
-
-        modelBuilder.Entity<GenreBook>(entity =>
-        {
-            entity.HasKey(e => e.GenreBookId).HasName("PK__GenreBoo__8AC21C4E908EF275");
-
-            entity.HasOne(d => d.Book).WithMany(p => p.GenreBooks)
-                .HasForeignKey(d => d.BookId)
-                .HasConstraintName("FK__GenreBook__BookI__60A75C0F");
-
-            entity.HasOne(d => d.Genre).WithMany(p => p.GenreBooks)
-                .HasForeignKey(d => d.GenreId)
-                .HasConstraintName("FK__GenreBook__Genre__619B8048");
         });
 
         modelBuilder.Entity<Reader>(entity =>

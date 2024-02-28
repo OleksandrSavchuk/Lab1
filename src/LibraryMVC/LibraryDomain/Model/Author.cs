@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LibraryDomain.Model;
 
-public partial class Author : Entity
+public partial class Author
 {
     public int AuthorId { get; set; }
 
@@ -13,5 +13,5 @@ public partial class Author : Entity
 
     public DateOnly? Birthday { get; set; }
 
-    public virtual ICollection<AuthorBook> AuthorBooks { get; set; } = new List<AuthorBook>();
+    public virtual ICollection<Book> Books { get; set; } = new List<Book>();
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LibraryDomain.Model;
 
-public partial class ReaderBook : Entity
+public partial class ReaderBook
 {
     public int ReaderBookId { get; set; }
 

@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Projects\\Lab1\\src\\LibraryMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|c:\\projects\\lab1\\src\\librarymvc\\librarydomain\\model\\authorbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|solutionrelative:librarydomain\\model\\authorbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|c:\\projects\\lab1\\src\\librarymvc\\librarydomain\\model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|solutionrelative:librarydomain\\model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\projects\\lab1\\src\\librarymvc\\libraryinfrastructure\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|c:\\projects\\lab1\\src\\librarymvc\\librarydomain\\model\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|solutionrelative:librarydomain\\model\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\projects\\lab1\\src\\librarymvc\\libraryinfrastructure\\views\\genres\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\views\\genres\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenresController.cs",
+              "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\GenresController.cs",
+              "RelativeDocumentMoniker": "LibraryInfrastructure\\Controllers\\GenresController.cs",
+              "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\GenresController.cs",
+              "RelativeToolTip": "LibraryInfrastructure\\Controllers\\GenresController.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T08:37:01.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\Views\\Genres\\Index.cshtml",
+              "RelativeDocumentMoniker": "LibraryInfrastructure\\Views\\Genres\\Index.cshtml",
+              "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\Views\\Genres\\Index.cshtml",
+              "RelativeToolTip": "LibraryInfrastructure\\Views\\Genres\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-27T08:43:20.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\Genre.cs",
+              "RelativeDocumentMoniker": "LibraryDomain\\Model\\Genre.cs",
+              "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\Genre.cs",
+              "RelativeToolTip": "LibraryDomain\\Model\\Genre.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T08:43:30.616Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthorBook.cs",
-              "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\AuthorBook.cs",
-              "RelativeDocumentMoniker": "LibraryDomain\\Model\\AuthorBook.cs",
-              "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\AuthorBook.cs",
-              "RelativeToolTip": "LibraryDomain\\Model\\AuthorBook.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAgAAAA",
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\Book.cs",
+              "RelativeDocumentMoniker": "LibraryDomain\\Model\\Book.cs",
+              "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\Book.cs",
+              "RelativeToolTip": "LibraryDomain\\Model\\Book.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T12:32:32.03Z",
+              "WhenOpened": "2024-02-26T18:33:34.361Z",
               "EditorCaption": ""
             }
           ]
