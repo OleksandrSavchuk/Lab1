@@ -1,18 +1,18 @@
 ﻿@model IEnumerable<LibraryDomain.Model.Genre>
 
 @{
-    ViewData["Title"] = "Бібліотека";
+    ViewData["Title"] = "список жанрів";
 }
 
-<h1>Перелік жанрів</h1>
+<h1>Список жанрів</h1>
 
 <p>
-    <a asp-action="Create">Додати новий жанр</a>
+    <a asp-action="Create">Додати жанр</a>
 </p>
-<table class="table">
+<table class="table" style="color: #fff">
     <thead>
         <tr>
-            <th>
+            <th style="color: #fff">
                 @Html.DisplayNameFor(model => model.GenreName)
             </th>
             <th></th>
@@ -21,11 +21,11 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+                <td style="color: #fff">
                 @Html.DisplayFor(modelItem => item.GenreName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.GenreId">Змінити</a> |
+                <a asp-action="Edit" asp-route-id="@item.GenreId">Редагувати</a> |
                 <a asp-action="Details" asp-route-id="@item.GenreId">Детальніше</a> |
                 <a asp-action="Delete" asp-route-id="@item.GenreId">Видалити</a>
             </td>

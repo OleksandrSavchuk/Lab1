@@ -1,11 +1,12 @@
 ﻿@model LibraryDomain.Model.Genre
 
 @{
-    ViewData["Title"] = "Видалення жанру";
+    ViewData["Title"] = "Видалення";
 }
 
+<h1>Видалення жанру</h1>
 
-<h3>Ви справді хочете видалити?</h3>
+<h3>Ви дійсно хочете видалити жанр?</h3>
 <div>
     <hr />
     <dl class="row">
@@ -20,6 +21,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="GenreId" />
         <input type="submit" value="Видалити" class="btn btn-danger" /> |
-        <a asp-action="Index">Повернутися до списку</a>
+        <a asp-action="Index">Назад до списку</a>
     </form>
 </div>

@@ -26,7 +26,7 @@ namespace LibraryInfrastructure.Controllers
         }
 
         // GET: Genres/Details/5
-       public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -117,6 +117,7 @@ namespace LibraryInfrastructure.Controllers
         }
 
         // GET: Genres/Delete/5
+        // GET: Genres/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -140,14 +141,29 @@ namespace LibraryInfrastructure.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var genre = await _context.Genres.FindAsync(id);
-            if (genre != null)
+            if (genre == null)
             {
-                _context.Genres.Remove(genre);
+                return NotFound();
             }
 
+            // Отримуємо всі книги, які мають цей жанр
+            var booksWithGenre = await _context.Books.Where(b => b.Genres.Any(g => g.GenreId == id)).ToListAsync();
+
+            // Видаляємо жанр із книг, які мають його
+            foreach (var book in booksWithGenre)
+            {
+                book.Genres.Remove(genre);
+            }
+
+            // Видаляємо сам жанр
+            _context.Genres.Remove(genre);
+
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
+
+
 
         private bool GenreExists(int id)
         {

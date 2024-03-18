@@ -1,0 +1,48 @@
+﻿@model IEnumerable<LibraryDomain.Model.Author>
+
+@{
+    ViewData["Title"] = "Автори";
+}
+
+<h1>Список авторів</h1>
+
+<p>
+    <a asp-action="Create">Додати нового автора</a>
+</p>
+<table class="table" style="color: #fff">
+    <thead>
+        <tr>
+            <th style="color: #fff">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th style="color: #fff">
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th style="color: #fff">
+                @Html.DisplayNameFor(model => model.Birthday)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td style="color: #fff">
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+                <td style="color: #fff">
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+                <td style="color: #fff">
+                @Html.DisplayFor(modelItem => item.Birthday)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AuthorId">Редагувати</a> |
+                <a asp-action="Details" asp-route-id="@item.AuthorId">Детальніше</a> |
+                <a asp-action="Delete" asp-route-id="@item.AuthorId">Видалити</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

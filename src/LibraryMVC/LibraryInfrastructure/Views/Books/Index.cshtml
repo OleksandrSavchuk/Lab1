@@ -1,0 +1,41 @@
+﻿@model IEnumerable<LibraryDomain.Model.Book>
+
+@{
+    ViewData["Title"] = "Список книг";
+}
+
+<h1>Список книг</h1>
+
+<p>
+    <a asp-action="Create">Додати книгу</a>
+</p>
+<table class="table" style="color: #fff">
+    <thead>
+        <tr>
+            <th style="color: #fff">
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th style="color: #fff">
+                @Html.DisplayNameFor(model => model.PublishedYear)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td style="color: #fff">
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+                <td style="color: #fff">
+                @Html.DisplayFor(modelItem => item.PublishedYear)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BookId">Редагування</a> |
+                <a asp-action="Details" asp-route-id="@item.BookId">Детальніше</a> |
+                <a asp-action="Delete" asp-route-id="@item.BookId">Видалити</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

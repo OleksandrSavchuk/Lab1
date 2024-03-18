@@ -149,6 +149,30 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+      "Id": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_darkly.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap_darkly.css"
+    },
+    {
+      "Id": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_darkly.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap_darkly.min.css"
+    },
+    {
+      "Id": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_litera.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap_litera.css"
+    },
+    {
+      "Id": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_litera.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap_litera.min.css"
+    },
+    {
+      "Id": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lux.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap_lux.css"
+    },
+    {
+      "Id": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lux.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap_lux.min.css"
+    },
+    {
       "Id": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },

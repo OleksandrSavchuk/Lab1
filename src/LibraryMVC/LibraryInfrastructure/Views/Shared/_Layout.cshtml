@@ -7,12 +7,24 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LibraryInfrastructure.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            color: #fff;
+        }
+    </style>
+    <style>
+        body {
+            background-image: url('https://images.wallpaperscraft.ru/image/single/kniga_chtenie_razmytost_212134_3840x2160.jpg');
+            background-size: cover; /* or use 'contain' to fit the image within the container */
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">LibraryInfrastructure</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Бібліотека</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,10 +32,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Головна</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark @(ViewData["ActiveTab"]?.ToString() == "Books" ? "active" : "")" href="@Url.Action("Index", "Books")">Книги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark @(ViewData["ActiveTab"]?.ToString() == "Authors" ? "active" : "")" href="@Url.Action("Index", "Authors")">Автори</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark @(ViewData["ActiveTab"]?.ToString() == "Genres" ? "active" : "")" href="@Url.Action("Index", "Genres")">Жанри</a>
                         </li>
                     </ul>
                 </div>
@@ -32,15 +50,16 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+            
+
+            <!-- Область для відображення вмісту вкладки -->
+            <div class="tab-content">
+                @RenderBody()
+            </div>
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - LibraryInfrastructure - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
