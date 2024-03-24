@@ -21,3 +21,4 @@ public partial class Book
 
     public virtual ICollection<Genre> Genres { get; set; } = new List<Genre>();
 }
+        

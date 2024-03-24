@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Projects\\Lab1\\src\\LibraryMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|c:\\projects\\lab1\\src\\librarymvc\\librarydomain\\model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|solutionrelative:librarydomain\\model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\projects\\lab1\\src\\librarymvc\\libraryinfrastructure\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|c:\\projects\\lab1\\src\\librarymvc\\librarydomain\\model\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|solutionrelative:librarydomain\\model\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|c:\\projects\\lab1\\src\\librarymvc\\librarydomain\\model\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|solutionrelative:librarydomain\\model\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\projects\\lab1\\src\\librarymvc\\libraryinfrastructure\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\projects\\lab1\\src\\librarymvc\\libraryinfrastructure\\dblibrarycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,8 +15,20 @@
       "RelativeMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\projects\\lab1\\src\\librarymvc\\libraryinfrastructure\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\projects\\lab1\\src\\librarymvc\\libraryinfrastructure\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|c:\\projects\\lab1\\src\\librarymvc\\librarydomain\\model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|solutionrelative:librarydomain\\model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|c:\\projects\\lab1\\src\\librarymvc\\librarydomain\\model\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|solutionrelative:librarydomain\\model\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|c:\\projects\\lab1\\src\\librarymvc\\librarydomain\\model\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADF488A9-DC2C-4E8E-B4E9-2C88DE1D887F}|LibraryDomain\\LibraryDomain.csproj|solutionrelative:librarydomain\\model\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{011E91D3-6117-4BDF-A4D0-52948204AEC0}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\projects\\lab1\\src\\librarymvc\\libraryinfrastructure\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,83 +102,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BooksController.cs",
               "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "LibraryInfrastructure\\Controllers\\BooksController.cs",
               "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\BooksController.cs",
               "RelativeToolTip": "LibraryInfrastructure\\Controllers\\BooksController.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAgwEwAAAAjAAAA",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAqwKgAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-12T07:36:29.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "AuthorsController.cs",
               "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\AuthorsController.cs",
               "RelativeDocumentMoniker": "LibraryInfrastructure\\Controllers\\AuthorsController.cs",
               "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\AuthorsController.cs",
               "RelativeToolTip": "LibraryInfrastructure\\Controllers\\AuthorsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAEAAAA",
+              "ViewState": "AQIAAJEAAAAAAAAAAAAYwJwAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T08:15:12.409Z"
+              "WhenOpened": "2024-03-12T08:15:12.409Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "DblibraryContext.cs",
               "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\DblibraryContext.cs",
               "RelativeDocumentMoniker": "LibraryInfrastructure\\DblibraryContext.cs",
               "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\DblibraryContext.cs",
               "RelativeToolTip": "LibraryInfrastructure\\DblibraryContext.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBcAAAAAAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwB4AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T12:39:32.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Author.cs",
               "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\Author.cs",
               "RelativeDocumentMoniker": "LibraryDomain\\Model\\Author.cs",
               "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\Author.cs",
               "RelativeToolTip": "LibraryDomain\\Model\\Author.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAmwBMAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T12:37:39.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "GenresController.cs",
               "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\GenresController.cs",
               "RelativeDocumentMoniker": "LibraryInfrastructure\\Controllers\\GenresController.cs",
               "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\GenresController.cs",
               "RelativeToolTip": "LibraryInfrastructure\\Controllers\\GenresController.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAcwKQAAAAAAAAA",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAAAIwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T12:59:11.103Z"
+              "WhenOpened": "2024-03-14T12:59:11.103Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\Book.cs",
               "RelativeDocumentMoniker": "LibraryDomain\\Model\\Book.cs",
               "ToolTip": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\Book.cs",
               "RelativeToolTip": "LibraryDomain\\Model\\Book.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T12:37:24.973Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Genre.cs",
               "DocumentMoniker": "C:\\Projects\\Lab1\\src\\LibraryMVC\\LibraryDomain\\Model\\Genre.cs",
               "RelativeDocumentMoniker": "LibraryDomain\\Model\\Genre.cs",
@@ -186,8 +188,7 @@
               "RelativeToolTip": "LibraryDomain\\Model\\Genre.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T14:08:32.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-18T14:08:32.395Z"
             },
             {
               "$type": "Document",

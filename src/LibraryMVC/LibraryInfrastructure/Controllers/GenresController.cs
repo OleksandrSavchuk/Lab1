@@ -140,28 +140,29 @@ namespace LibraryInfrastructure.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var genre = await _context.Genres.FindAsync(id);
+            var genre = await _context.Genres.Include(g => g.Books).FirstOrDefaultAsync(g => g.GenreId == id);
             if (genre == null)
             {
                 return NotFound();
             }
 
-            // Отримуємо всі книги, які мають цей жанр
-            var booksWithGenre = await _context.Books.Where(b => b.Genres.Any(g => g.GenreId == id)).ToListAsync();
-
-            // Видаляємо жанр із книг, які мають його
-            foreach (var book in booksWithGenre)
+            if (genre.Books.Count == 1)
             {
-                book.Genres.Remove(genre);
+                _context.Genres.Remove(genre);
+                _context.Books.Remove(genre.Books.First());
             }
-
-            // Видаляємо сам жанр
-            _context.Genres.Remove(genre);
+            else
+            {
+                _context.Genres.Remove(genre);
+            }
 
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
+
+
+
 
 
 

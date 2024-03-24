@@ -6,6 +6,7 @@ namespace LibraryDomain.Model;
 
 public partial class Author
 {
+
     public int AuthorId { get; set; }
     [Required(ErrorMessage = "Введіть щось")]
     [Display(Name = "Ім'я")]

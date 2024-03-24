@@ -150,16 +150,27 @@ namespace LibraryInfrastructure.Controllers
                 return NotFound();
             }
 
-            // Видалення всіх книг, які належать цьому автору
-            _context.Books.RemoveRange(author.Books);
+            foreach (var book in author.Books)
+            {
+                var authors = await _context.Authors.Where(a => a.Books.Contains(book)).ToListAsync();
 
-            // Видалення самого автора
+                if (authors.Count == 1 && authors.Any(a => a.AuthorId == id))
+
+                {
+                    _context.Books.Remove(book);
+                }
+
+            }
+
             _context.Authors.Remove(author);
-
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
+
+
+
+
 
 
 

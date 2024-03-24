@@ -437,7 +437,6 @@ C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\refint\Li
 C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.pdb
 C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.genruntimeconfig.cache
 C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\ref\LibraryInfrastructure.dll
-C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.sourcelink.json
 C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\Microsoft.Build.dll
 C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\Microsoft.Build.Framework.dll
 C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll

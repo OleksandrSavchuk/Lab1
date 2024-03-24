@@ -165,32 +165,28 @@ namespace LibraryInfrastructure.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var book = await _context.Books.Include(b => b.Genres).Include(b => b.Authors).FirstOrDefaultAsync(b => b.BookId == id);
+            var book = await _context.Books
+                .Include(b => b.Authors).Include(g => g.Genres)
+                .FirstOrDefaultAsync(b => b.BookId == id);
+
             if (book == null)
             {
                 return NotFound();
             }
 
-            // Створення копії колекції Authors
-            var authorsToRemove = book.Authors.ToList();
-
-            // Видалення книги із всіх зв'язаних авторів
-            foreach (var author in authorsToRemove)
+            // Видалення книги зі списку авторів, не видаляючи авторів
+            foreach (var author in book.Authors)
             {
                 author.Books.Remove(book);
             }
 
-            // Видалення всіх зв'язаних записів з таблиць GenreBook та AuthorBook
-            _context.RemoveRange(book.Genres);
-            _context.RemoveRange(authorsToRemove);
-
-            // Видалення самої книги
+            book.Genres.Clear();
             _context.Books.Remove(book);
-
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
+
 
 
 
