@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Статистика";
+}
+
+<style>
+    .chart-container {
+        margin: 0 auto;
+        padding: 20px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 chart-container">
+            <h2 class="text-center">Кількість книг за роками</h2>
+            <div id="countByYearChart"></div>
+        </div>
+        <div class="col-6 chart-container">
+            <h2 class="text-center">Кількість книг за авторами</h2>
+            <div id="countByAuthorChart"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+        google.charts.setOnLoadCallback(function () {
+            drawCharts();
+            drawAnotherChart();
+        });
+
+        function drawCharts() {
+            fetch('/api/Charts/countByYear')
+                .then(response => response.json())
+                .then(data => {
+                    const dataTable = new google.visualization.DataTable();
+                    dataTable.addColumn('string', 'Рік');
+                    dataTable.addColumn('number', 'Кількість книг');
+
+                    data.forEach(item => {
+                        dataTable.addRow([item.year, item.count]);
+                    });
+
+                    const options = {
+                        title: 'Книги за роками',
+                        width: 600,
+                        height: 400,
+                        legend: { position: 'none' },
+                    };
+
+                    const chart = new google.visualization.ColumnChart(document.getElementById('countByYearChart'));
+
+                    chart.draw(dataTable, options);
+                });
+        }
+
+        function drawAnotherChart() {
+            // Тут потрібно отримати дані для іншого графіка
+            fetch('/api/charts/countByAuthor')
+                .then(response => response.json())
+                .then(data => {
+                    const dataTable = new google.visualization.DataTable();
+                    dataTable.addColumn('string', 'Автор');
+                    dataTable.addColumn('number', 'Кількість книг');
+                    data.forEach(item => {
+                        dataTable.addRow([item.author, item.count]);
+                    });
+
+                    const options = {
+                        title: 'Книги за авторами',
+                        width: 600,
+                        height: 400,
+                        legend: { position: 'none' },
+                    };
+
+                    const chart = new google.visualization.PieChart(document.getElementById('countByAuthorChart'));
+                    chart.draw(dataTable, options);
+                });
+        }
+    </script>
+}
