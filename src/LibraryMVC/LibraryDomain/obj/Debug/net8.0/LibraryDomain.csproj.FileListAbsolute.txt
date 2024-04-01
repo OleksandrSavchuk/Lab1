@@ -9,3 +9,4 @@ C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\LibraryDomain.dll
 C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\refint\LibraryDomain.dll
 C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\LibraryDomain.pdb
 C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\ref\LibraryDomain.dll
+C:\Projects\Lab1\src\LibraryMVC\LibraryDomain\obj\Debug\net8.0\LibraryDomain.csproj.AssemblyReference.cache

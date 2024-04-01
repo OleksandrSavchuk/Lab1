@@ -556,3 +556,10 @@ C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\runtimes\
 C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\ClosedXML.dll
+C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\ExcelNumberFormat.dll
+C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\Irony.dll
+C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\SixLabors.Fonts.dll
+C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Projects\Lab1\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\XLParser.dll

@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LibraryDomain.Model;
 using LibraryInfrastructure;
+using ClosedXML.Excel;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Text.RegularExpressions;
 
 namespace LibraryInfrastructure.Controllers
 {
@@ -63,9 +66,24 @@ namespace LibraryInfrastructure.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(author);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (!Regex.IsMatch(author.FirstName, @"\d") && !Regex.IsMatch(author.LastName, @"\d"))
+                {
+                    _context.Add(author);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    if (Regex.IsMatch(author.FirstName, @"\d"))
+                    {
+                        ModelState.AddModelError("FirstName", "Ім'я не може містити цифри.");
+                    }
+                    if (Regex.IsMatch(author.LastName, @"\d"))
+                    {
+                        ModelState.AddModelError("LastName", "Прізвище не може містити цифри.");
+                    }
+                    return View(author);
+                }
             }
             return View(author);
         }
@@ -167,16 +185,6 @@ namespace LibraryInfrastructure.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-
-
-
-
-
-
-
-
-
-
 
     }
 }

@@ -60,7 +60,6 @@
         }
 
         function drawAnotherChart() {
-            // Тут потрібно отримати дані для іншого графіка
             fetch('/api/charts/countByAuthor')
                 .then(response => response.json())
                 .then(data => {

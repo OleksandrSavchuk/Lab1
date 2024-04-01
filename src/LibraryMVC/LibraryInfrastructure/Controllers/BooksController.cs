@@ -11,6 +11,7 @@ using static LibraryInfrastructure.DblibraryContext;
 using System.Numerics;
 using System.IO;
 using NuGet.Packaging;
+using ClosedXML.Excel;
 
 
 namespace LibraryInfrastructure.Controllers
@@ -195,6 +196,147 @@ namespace LibraryInfrastructure.Controllers
         private bool BookExists(int id)
         {
             return _context.Books.Any(e => e.BookId == id);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Import(IFormFile fileExcel)
+        {
+            if (fileExcel == null || fileExcel.Length == 0)
+            {
+                ModelState.AddModelError("", "Please select an Excel file.");
+                return View();
+            }
+
+            if (!Path.GetExtension(fileExcel.FileName).Equals(".xlsx", StringComparison.OrdinalIgnoreCase))
+            {
+                ModelState.AddModelError("", "Please select an Excel file.");
+                return View();
+            }
+
+            using (var stream = new MemoryStream())
+            {
+                await fileExcel.CopyToAsync(stream);
+                using (var workBook = new XLWorkbook(stream))
+                {
+                    var worksheet = workBook.Worksheets.First();
+                    var books = new List<Book>();
+                    foreach (var row in worksheet.RowsUsed().Skip(1))
+                    {
+                        var title = row.Cell(1).Value.ToString();
+                        int publishedYear;
+                        if (!int.TryParse(row.Cell(2).Value.ToString(), out publishedYear))
+                        {
+                            ModelState.AddModelError("", "Invalid published year format in Excel file.");
+                            return View();
+                        }
+
+                        var genresString = row.Cell(3).Value.ToString();
+                        var genresArray = genresString.Split(',').Select(genre => genre.Trim()).ToArray();
+
+                        var authorsString = row.Cell(4).Value.ToString();
+                        var authorsArray = authorsString.Split(',').Select(author => author.Trim()).ToArray();
+
+                        var authors = new List<Author>();
+                        foreach (var authorName in authorsArray)
+                        {
+                            var authorNames = authorName.Split(' ');
+                            if (authorNames.Length == 2)
+                            {
+                                var firstName = authorNames[0];
+                                var lastName = authorNames[1];
+
+                                var existingAuthor = await _context.Authors.FirstOrDefaultAsync(a => a.FirstName == firstName && a.LastName == lastName);
+                                if (existingAuthor != null)
+                                {
+                                    authors.Add(existingAuthor);
+                                }
+                                else
+                                {
+                                    authors.Add(new Author { FirstName = firstName, LastName = lastName });
+                                }
+                            }
+                            else
+                            {
+                                ModelState.AddModelError("", "Invalid author name format in Excel file.");
+                                return View();
+                            }
+                        }
+
+                        var genres = new List<Genre>();
+                        foreach (var genreName in genresArray)
+                        {
+                            var existingGenre = await _context.Genres.FirstOrDefaultAsync(g => g.GenreName == genreName);
+                            if (existingGenre != null)
+                            {
+                                genres.Add(existingGenre);
+                            }
+                            else
+                            {
+                                genres.Add(new Genre { GenreName = genreName });
+                            }
+                        }
+
+                        var book = new Book
+                        {
+                            Title = title,
+                            PublishedYear = publishedYear,
+                            Authors = authors,
+                            Genres = genres
+                        };
+
+                        books.Add(book);
+                    }
+
+
+                    await _context.Books.AddRangeAsync(books);
+                }
+            }
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        public async Task<IActionResult> Export()
+        {
+            using (var workbook = new XLWorkbook())
+            {
+                var books = await _context.Books.Include(book => book.Genres).Include(book => book.Authors).ToListAsync();
+
+                var worksheet = workbook.Worksheets.Add("Books");
+
+                worksheet.Cell("A1").Value = "Title";
+                worksheet.Cell("B1").Value = "PublishedYear";
+                worksheet.Cell("C1").Value = "Genres";
+                worksheet.Cell("D1").Value = "Authors";
+
+                worksheet.Row(1).Style.Font.Bold = true;
+
+                int row = 2;
+                foreach (var book in books)
+                {
+                    worksheet.Cell(row, 1).Value = book.Title;
+                    worksheet.Cell(row, 2).Value = book.PublishedYear;
+                    string genresString = string.Join(", ", book.Genres.Select(genre => genre.GenreName));
+                    worksheet.Cell(row, 3).Value = genresString;
+                    string authorsString = string.Join(", ", book.Authors.Select(author => $"{author.FirstName} {author.LastName}"));
+                    worksheet.Cell(row, 4).Value = authorsString;
+                    row++;
+                }
+
+                using (var stream = new MemoryStream())
+                {
+                    workbook.SaveAs(stream);
+                    var content = stream.ToArray();
+
+                    return File(content,
+                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        "Books.xlsx");
+                }
+            }
         }
     }
 }
